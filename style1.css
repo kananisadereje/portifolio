@@ -1,0 +1,132 @@
+/* Reset all elements' margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: rgb(14, 12, 13); /* Background color */
+}
+
+/* Header styles */
+header {
+  background-color: #0c1621;
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid #3498db; /* Solid border at the bottom */
+}
+
+/* Navigation styles */
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex; /* Show links by default */
+  margin-right: auto; /* Push the menu toggle to the right */
+}
+
+header nav ul li {
+  margin: 0 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: #1f2a36;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* General mobile styles */
+@media screen and (max-width: 480px) {
+  h2 {
+      font-size: 28px;
+  }
+
+  .hero h1 {
+      font-size: 30px;
+  }
+
+  .hero p {
+      font-size: 16px;
+  }
+
+  button {
+      padding: 12px;
+      font-size: 16px;
+  }
+
+  footer p {
+      font-size: 12px;
+  }
+}
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+  header nav ul {
+      display: none; /* Hide the links */
+      flex-direction: column; /* Stack links vertically */
+      width: 200px; /* Set width for dropdown */
+      background-color: #0c1621; /* Background color */
+      position: absolute;
+      top: 70px; /* Below the header */
+      right: 0; /* Align to the right */
+      z-index: 1;
+      border-top: 2px solid #3498db; /* Border for dropdown */
+  }
+
+  header nav ul li {
+      width: 100%; /* Full width links */
+      margin: 5px 0; /* Vertical margin for links */
+  }
+
+  header nav ul li a {
+      display: block; /* Full width links */
+      padding: 10px; /* Smaller padding */
+      font-size: 16px; /* Smaller font size */
+  }
+
+  .menu-toggle {
+      display: flex; /* Show the hamburger icon */
+  }
+
+  header nav.active ul {
+      display: flex; /* Show the menu when active */
+  }
+}
+
+/* Style for the active state of the menu */
+header nav.active ul {
+  display: flex; /* Show the menu when active */
+  flex-direction: column; /* Stack vertically */
+}

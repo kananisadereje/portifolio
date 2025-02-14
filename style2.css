@@ -1,0 +1,109 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.left-column {
+    background-color: #2980b9;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.right-column {
+    background-color: #ecf0f1;
+    padding: 20px;
+    color: #2d3e50;
+    border-radius: 10px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 36px;
+    color: #fff;
+}
+
+header .title {
+    font-size: 18px;
+    color: #d5dbdb;
+    margin-bottom: 10px;
+}
+
+header .contact-info a {
+    color: #ecf0f1;
+    text-decoration: none;
+    margin: 0 10px;
+    display: block;
+}
+
+header .contact-info a:hover {
+    text-decoration: underline;
+}
+
+section h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+.job, .project {
+    margin-bottom: 20px;
+}
+
+.job h3, .project h3 {
+    font-size: 20px;
+    color: #3498db;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+    }
+}

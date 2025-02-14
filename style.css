@@ -1,0 +1,374 @@
+/* Reset all elements' margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: rgb(163, 113, 113); /* Set background color to white */
+    color: #333; /* Text color */
+    border: 15px solid; /* Border for the body */
+    border-image: linear-gradient(45deg, #ff6b6b, #f9e86c, #6bf2a2, #6b6bff); /* Gradient border */
+    border-image-slice: 1; /* Ensures the gradient is applied to the border */
+    padding: 10px; /* Padding to minimize space between border and container */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+  }
+  
+  body:hover {
+    background-color: #ddd3f8; /* Light blue background on hover */
+  }
+  
+  .container {
+    max-width: 1200px; /* Set maximum width for the container */
+    width: 95%; /* Responsive width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding for the container */
+  }
+  
+  header {
+    width: calc(100% - 40px); /* Adjust to avoid full width */
+    margin: 0 auto; /* Center the header */
+    background-color: white; /* Header background color set to white */
+    color: #502c4d; /* Darker header text */
+    padding: 10px 0; /* Reduced padding */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-bottom: 2px solid #3498db; /* Solid border at the bottom */
+  }
+  
+  header nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  header nav ul li {
+    display: inline-block;
+    margin: 0 5px; /* Reduced margin */
+  }
+  
+  header nav ul li a {
+    color: #2c3e50; /* Dark link color */
+    text-decoration: none;
+    font-size: 14px; /* Smaller font size for mobile */
+    font-weight: 600;
+    padding: 6px 12px; /* Smaller padding */
+    border-radius: 20px; /* Smaller border radius */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Added transform transition */
+  }
+  
+  header nav ul li a:hover {
+    background-color: #f1efec; /* Lighter background on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+  }
+  
+  section {
+    max-width: 1200px; /* Increased max width for sections */
+    width: 95%; /* Set a percentage width for responsiveness */
+    margin: 20px auto; /* Centered margin */
+    padding: 40px 2%; /* Reduced padding */
+    text-align: center;
+    color: #bdc3c7; /* Softer text color */
+    background-color: rgba(255, 255, 255, 0.897); /* Section background color set to white */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for hover */
+  }
+  
+  section:hover {
+    transform: translateY(-4px); /* Move up on hover */
+  }
+  
+  h2 {
+    font-size: 24px; /* Smaller font size */
+    margin-bottom: 10px; /* Reduced margin */
+    text-transform: uppercase;
+    color: #3498db; /* Modern accent color */
+  }
+  
+  #home {
+    background-color: white; /* Default background for home section */
+    color: #2c3e50; /* Text color for home section */
+    padding: 60px 20px; /* Padding for responsiveness */
+    border: 3px solid #2980b9; /* Solid border for home section */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Add transition for hover effects */
+  }
+  
+  #home:hover {
+    background-color: #2980b9; /* Change background color to match other sections on hover */
+    color: white; /* Change text color for better contrast */
+  }
+  
+  .hero h1 {
+    font-size: 28px; /* Smaller font size */
+    margin-bottom: 10px; /* Reduced margin */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* Reduced letter spacing */
+  }
+  
+  .hero p {
+    font-size: 16px; /* Smaller font size */
+    font-weight: 500;
+    color: #2c3e50; /* Text color */
+  }
+  
+  .profile-img {
+    width: 200px; /* Smaller size */
+    height: 200px; /* Smaller size */
+    border-radius: 50%;
+    margin-bottom: 10px; /* Reduced margin */
+  }
+  
+  #about, #skills, #projects, #contact {
+    max-width: 1200px; /* Increased max width for sections */
+    width: 95%; /* Set percentage width for responsiveness */
+    background-color: white; /* Light background for sections */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 10px auto; /* Centered margin */
+    border: 2px solid #2980b9; /* Solid border for all sections */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Add transition for hover */
+  }
+  
+  #about:hover, #skills:hover, #projects:hover, #contact:hover {
+    background-color: #2980b9; /* Change background color on hover */
+    color: rgb(255, 255, 255); /* Change text color for better contrast */
+    transform: translateY(-4px); /* Move up on hover */
+  }
+  
+  #skills {
+    background-color: white; /* Skills section background color */
+    padding: 20px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(209, 12, 12, 0.2);
+    margin: 10px auto; /* Centered margin */
+    border: 2px solid #2980b9; /* Solid border for skills section */
+  }
+  
+  #skills h2 {
+    font-size: 24px; /* Smaller font size */
+    color: #2c3e50; /* Dark heading color */
+    margin-bottom: 10px; /* Reduced margin */
+  }
+  
+  .skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced gap */
+  }
+  
+  .skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px; /* Reduced gap */
+    width: 160px; /* Smaller width */
+    border: 2px solid #2980b9; /* Solid border for each skill */
+    padding: 8px; /* Smaller padding */
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255); /* Skill background */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Add transition for hover */
+  }
+  
+  .skill:hover {
+    background-color: #4829b9; /* Change background color on hover */
+    transform: translateY(-4px); /* Move up on hover */
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 14px; /* Reduced height */
+    background-color: #7f8c8d; /* Neutral progress bar background */
+    border-radius: 25px;
+    overflow: hidden;
+    margin-bottom: 5px;
+  }
+  
+  .progress {
+    height: 100%;
+    background-color: #2980b9; /* Accent color for progress */
+    border-radius: 25px;
+  }
+  
+  .percentage {
+    font-size: 14px; /* Smaller font size */
+    font-weight: bold;
+    color: #2c3e50; /* Dark percentage text */
+  }
+  
+  .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Smaller min width */
+    gap: 10px; /* Reduced gap */
+    margin-top: 20px; /* Reduced margin */
+  }
+  
+  .project {
+    background-color: white; /* Light project background */
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(19, 88, 128, 0.2);
+    border: 2px solid #2980b9; /* Solid border for each project */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Add transition for hover */
+  }
+  
+  .project:hover {
+    background-color: #3498db; /* Change background color on hover */
+    transform: translateY(-4px); /* Move up on hover */
+  }
+  
+  .project img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px; /* Reduced margin */
+  }
+  
+  .project h3 {
+    font-size: 18px; /* Smaller font size */
+    margin-bottom: 5px; /* Reduced margin */
+    color: #34495e; /* Darker project title color */
+  }
+  
+  .project p {
+    font-size: 12px; /* Smaller font size */
+    color: #7f8c8d; /* Neutral project description color */
+  }
+  
+  form {
+    max-width: 90%; /* Set max width for mobile */
+    margin: 20px auto; /* Centered margin */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap */
+    background-color: white; /* Darker form background */
+    padding: 10px; /* Reduced padding */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 2px solid #2980b9; /* Solid border for form */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Add transition for hover */
+  }
+  
+  form:hover {
+    background-color: #2980b9; /* Change background color on hover */
+    transform: translateY(-4px); /* Move up on hover */
+  }
+  
+  input, textarea {
+    padding: 8px; /* Reduced padding */
+    border: 2px solid #bebdc7;
+    border-radius: 8px;
+    font-size: 14px; /* Reduced font size */
+    color: #333;
+    background-color: white; /* Light input background */
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #2980b9; /* Accent color on focus */
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 80px; /* Reduced min height */
+  }
+  
+  button {
+    padding: 10px; /* Reduced padding */
+    background-color: #3498db; /* Button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px; /* Smaller font size */
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Added transform for button */
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Darker button on hover */
+    transform: translateY(-2px); /* Move up on hover */
+  }
+  
+  footer {
+    background-color: white; /* Footer background color set to white */
+    color: #2c3e50; /* Darker footer text */
+    text-align: center;
+    padding: 10px 0; /* Reduced padding */
+    position: relative;
+    border-top: 2px solid #064772; /* Solid border at the top of footer */
+  }
+  
+  footer p {
+    font-size: 12px; /* Reduced font size */
+  }
+  
+  @media screen and (max-width: 1000px) {
+    header nav ul li {
+      margin: 0 5px; /* Further reduced margin */
+    }
+  
+    section {
+      padding: 20px 2%; /* Further reduced padding */
+    }
+  
+    #home {
+      padding: 40px 20px; /* Adjusted padding for responsiveness */
+      color: #2c3e50; /* Text color */
+    }
+  
+    .projects-container {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  
+    .hero h1 {
+      font-size: 24px; /* Smaller font size */
+    }
+  
+    .hero p {
+      font-size: 14px; /* Smaller font size */
+      color: #2c3e50; /* Text color */
+    }
+  
+    #skills {
+      padding: 20px; /* Reduced padding */
+      margin: 0 auto; /* Centered margin */
+    }
+    
+    #skills h2 {
+      font-size: 24px; /* Smaller font size */
+      color: #2c3e50; /* Dark heading color */
+      margin-bottom: 10px; /* Reduced margin */
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px; /* Reduced gap */
+    }
+    
+    .skill {
+      width: 150px; /* Smaller width for mobile */
+    }
+    
+    .skill h3 {
+      font-size: 16px; /* Smaller font size */
+    }
+    
+    .progress-bar {
+      height: 12px; /* Smaller height */
+    }
+    
+    .progress {
+      height: 6px; /* Smaller progress height */
+    }
+    
+    .percentage {
+      font-size: 14px; /* Smaller font size */
+    }
+    
+    .project {
+      padding: 8px; /* Reduced padding */
+    }
+  }
